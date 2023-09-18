@@ -2,7 +2,7 @@ import React from 'react'
 import dummyData from '../datas/dummyData'
 import ItemContainer from './ItemContainer'
 
-export default function ImageContainer() {
+export default function GridContainer() {
     const dummyItems = dummyData.data.items
     const items = dummyItems.map((item) => (<ItemContainer key={item.id} name={item.name} image_url={item.image_url} price={item.price}/>))
 
