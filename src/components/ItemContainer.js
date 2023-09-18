@@ -7,8 +7,8 @@ export default function ItemContainer(props) {
     return (
         <div className='w-44'>
             <img className="w-44 h-56 object-cover bg-[#C0ACCA] rounded-lg" alt="이미지" src={props.image_url}></img>
-            <p className='truncate'>{props.name}</p>
             <p className='font-bold'>{props.price}</p>
+            <p className='truncate text-xs text-slate-500'>{props.name}</p>
         </div>
     )
 }
