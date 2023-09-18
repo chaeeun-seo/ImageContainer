@@ -1,12 +1,13 @@
 import React from 'react'
 
 export default function ItemContainer(props) {
-    // const bgColor = ["#f8f1fb", "#E3CFED", "#C0ACCA"];
-    // const myColor = '#C0ACCA';
-    // const num = bgColor[props.key%3]
+    // TODO : change bg color of img
+    // props.checkGrid == true : w-44, h-56
+    // props.checkGrid == false : w-28, h-36
+
     return (
-        <div className='w-44'>
-            <img className="w-44 h-56 object-cover bg-[#C0ACCA] rounded-lg" alt="이미지" src={props.image_url}></img>
+        <div className={`${props.checkGrid ? 'w-44' : 'w-28'} flex-none`}>
+            <img className={`${props.checkGrid ? 'w-44' : 'w-28'} ${props.checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={props.image_url}></img>
             <p className='font-bold'>{props.price}</p>
             <p className='truncate text-xs text-slate-500'>{props.name}</p>
         </div>
