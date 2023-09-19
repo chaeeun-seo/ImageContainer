@@ -4,7 +4,18 @@ import ItemContainer from './ItemContainer'
 
 export default function GridContainer() {
     const dummyItems = dummyData.data.items
-    const items = dummyItems.map((item) => (<ItemContainer key={item.id} checkGrid={true} name={item.name} image_url={item.image_url} price={item.price}/>))
+    const items = dummyItems.map(function(item){
+        const propsObj = {
+            key: item.id,
+            name: item.name,
+            image_url: item.image_url,
+            price: item.price,
+            checkGrid: true,
+        }
+        return <ItemContainer {...propsObj}/>
+    })
+    // const items = dummyItems.map((item) => (<ItemContainer {...item, {checkGrid: true}}/>))
+    // const items = dummyItems.map((item) => (<ItemContainer key={item.id} checkGrid={true} name={item.name} image_url={item.image_url} price={item.price}/>))
 
     return (
         // <div className='w-11/12 sm:w-9/12 flex flex-wrap gap-4 justify-start justify-items-center'>
