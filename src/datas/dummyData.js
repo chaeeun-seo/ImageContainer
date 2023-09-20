@@ -1,5 +1,6 @@
 export default {
     "success" : true,
+    "title" : "이번주 TOP 100",
     "data" : {
         "items" : [
             {
