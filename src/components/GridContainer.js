@@ -4,9 +4,10 @@ import ItemContainer from './ItemContainer'
 
 export default function GridContainer() {
     const dummyItems = dummyData.data.items
-    const items = dummyItems.map(function(item){
+    const items = dummyItems.map(function(item, index){
         const propsObj = {
             key: item.id,
+            order: index,
             name: item.name,
             image_url: item.image_url,
             price: item.price,
