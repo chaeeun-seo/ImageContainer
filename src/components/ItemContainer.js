@@ -1,13 +1,15 @@
 import React from 'react'
 
-export default function ItemContainer({name, image_url, price, checkGrid}) {
+export default function ItemContainer({order, name, image_url, price, checkGrid}) {
     // TODO : change bg color of img
     // props.checkGrid == true : w-44, h-56
     // props.checkGrid == false : w-28, h-36
+    const colorList = ['#F8F1FB', '#E3CFED', '#C0ACCA']
+    const bgColor = colorList[order%3]
 
     return (
         <div className={`${checkGrid ? 'w-44' : 'w-28'} flex-none`}>
-            <img className={`${checkGrid ? 'w-44' : 'w-28'} ${checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
+            <img style={{backgroundColor: `${bgColor}`}} className={`${checkGrid ? 'w-44' : 'w-28'} ${checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
             <p className='font-bold'>{price}</p>
             <p className='truncate text-xs text-slate-500'>{name}</p>
         </div>
