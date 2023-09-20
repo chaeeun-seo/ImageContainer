@@ -4,7 +4,7 @@ import ItemContainer from './ItemContainer'
 
 export default function HorizontalContainer() {
     const dummyItems = dummyData.data.items
-    const items = dummyItems.map((item) => (<ItemContainer key={item.id} checkGrid={false} name={item.name} image_url={item.image_url} price={item.price}/>))
+    const items = dummyItems.map((item, index) => (<ItemContainer key={item.id} order={index} checkGrid={false} name={item.name} image_url={item.image_url} price={item.price}/>))
     const title = dummyData.title
 
     return (
