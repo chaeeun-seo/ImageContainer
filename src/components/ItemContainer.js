@@ -10,7 +10,7 @@ export default function ItemContainer({order, name, image_url, price, checkGrid}
     return (
         <div className={`${checkGrid ? 'w-44' : 'w-28'} flex-none`}>
             <img style={{backgroundColor: `${bgColor}`}} className={`${checkGrid ? 'w-44' : 'w-28'} ${checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
-            <p className='font-bold'>{price}</p>
+            <p className='font-bold text-sm'>{price}</p>
             <p className='truncate text-xs text-slate-500'>{name}</p>
         </div>
     )
