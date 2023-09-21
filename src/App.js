@@ -1,9 +1,10 @@
 import './App.css';
+import { Carousel } from 'flowbite';
 import GridContainer from './components/GridContainer';
 import CategoryContainer from './components/CategoryContainer';
 import HorizontalContainer from './components/HorizontalContainer';
-import { Carousel } from 'flowbite';
 import CarouselContainer from './components/CarouselContainer';
+import AccordionContainer from './components/AccordionContainer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <CarouselContainer/>
       <CategoryContainer/>
       <HorizontalContainer/>
+      <AccordionContainer/>
       <GridContainer/>
     </div>
   );
