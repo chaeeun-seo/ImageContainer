@@ -1,11 +1,12 @@
 import React from 'react'
+import HorizontalContainer from './HorizontalContainer'
 
 export default function AccordionBox({id, rank, name, tags, profile_image, items}) {
     const tagsContainer = tags.map((tag, index) => (<span key={index} className='text-sm text-gray-500 font-normal'>#{tag}</span>))
 
     return (
-        <>
-            <h2 id={`accordion-heading-${id}`}>
+        <div className="w-full flex flex-col justify-center items-center">
+            <h2 id={`accordion-heading-${id}`} className='w-full'>
                 <button type="button" className="flex items-center justify-between w-full px-5 py-5 font-medium text-left text-gray-500 focus:rounded-lg border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 focus:ring-1 focus:ring-[#5839D5] dark:focus:ring-[#5839D5]" data-accordion-target={`#accordion-body-${id}`} aria-expanded="true" aria-controls={`accordion-body-${id}`}>
                     <div className='flex gap-4 items-center'>
                         <p>{rank}</p>
@@ -20,12 +21,11 @@ export default function AccordionBox({id, rank, name, tags, profile_image, items
                     </svg>
                 </button>
             </h2>
-            <div id={`accordion-body-${id}`} className="hidden" aria-labelledby={`accordion-heading-${id}`}>
-                <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                    <p className="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-                    <p className="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" className="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+            <div id={`accordion-body-${id}`} className="hidden w-full" aria-labelledby={`accordion-heading-${id}`}>
+                <div className="w-full py-5 border-b border-gray-200 dark:border-gray-700">
+                    <HorizontalContainer isTitle={false}/>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
