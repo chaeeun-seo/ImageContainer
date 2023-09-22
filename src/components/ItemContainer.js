@@ -8,7 +8,11 @@ export default function ItemContainer({order, name, image_url, price, checkGrid}
     const bgColor = colorList[order%3]
 
     return (
-        <div className={`${checkGrid ? 'w-44' : 'w-28'} flex-none`}>
+        // <div className={`flex flex-col ${checkGrid ? 'w-44' : 'w-28'} grow`}>
+        //     <div className={`grow w-full ${checkGrid ? 'h-56' : 'h-36'}`}>
+        //         <img style={{backgroundColor: `${bgColor}`}} className={`grow w-full h-full object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
+        //     </div>
+        <div className={`${checkGrid ? 'w-44' : 'w-28'} grow`}>
             <img style={{backgroundColor: `${bgColor}`}} className={`${checkGrid ? 'w-44' : 'w-28'} ${checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
             <p className='font-bold text-sm'>{price}</p>
             <p className='truncate text-xs text-slate-500'>{name}</p>
