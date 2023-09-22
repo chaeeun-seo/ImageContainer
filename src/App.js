@@ -8,10 +8,10 @@ import AccordionContainer from './components/AccordionContainer';
 
 function App() {
   return (
-    <div className='w-full flex flex-col justify-center items-center gap-4'>
+    <div className='w-full flex flex-col justify-center items-center gap-8'>
       <CarouselContainer/>
       <CategoryContainer/>
-      <HorizontalContainer/>
+      <HorizontalContainer isTitle={true}/>
       <AccordionContainer/>
       <GridContainer/>
     </div>
