@@ -19,9 +19,12 @@ export default function GridContainer() {
     // const items = dummyItems.map((item) => (<ItemContainer key={item.id} checkGrid={true} name={item.name} image_url={item.image_url} price={item.price}/>))
 
     return (
-        // <div className='w-11/12 sm:w-9/12 flex flex-wrap gap-4 justify-start justify-items-center'>
-        <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4'>     
-            {items}
+        <div className="w-full flex flex-col justify-center items-center gap-3">
+            <h2 className='w-full max-w-6xl text-left text-lg font-bold'>{dummyData.title}</h2>
+            <div className='w-full max-w-6xl flex flex-wrap gap-4 justify-start justify-items-center'>
+            {/* <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4'>      */}
+                {items}
+            </div>
         </div>
     )
 }
