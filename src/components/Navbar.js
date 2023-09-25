@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { FaBars, FaX } from "react-icons/fa6";
+import { FaBars, FaX, FaChartSimple, FaPen } from "react-icons/fa6";
 import { navLinks } from '../datas/navData';
 
 export default function Navbar() {
@@ -8,8 +8,8 @@ export default function Navbar() {
     const drawerItems = navLinks.filter((nav) => nav.icon === false).map((nav) => (<li key={nav.id}><a href={`#${nav.id}`}><span className='text-base'>{nav.title}</span></a></li>))
 
     return (
-        <nav className='flex flex-row max-w-6xl w-full my-3 sm:justify-between items-center gap-4'>
-            <>
+        <nav className='flex flex-row max-w-6xl w-full justify-between items-center'>
+            <div className='flex my-3 gap-4 items-center'>
                 <div className='sm:hidden'>
                     <button className='sm:hidden' type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
                         <FaBars className="mt-2" size={14}/>
@@ -28,9 +28,14 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-            </>
-            
-            <img src="https://studiocdn.ifland.io/images/logo/prod-9c2754b9730e649424d85a9264c2281e.png" alt="" />
+                <img src="https://studiocdn.ifland.io/images/logo/prod-9c2754b9730e649424d85a9264c2281e.png" alt="" />
+            </div>
+
+            <div className='flex gap-4 sm:hidden'>
+                <FaChartSimple className="mt-2" size={14}/>
+                <FaPen className="mt-2" size={14}/>
+            </div>
+
             <ul className='hidden sm:flex justify-end items-center'>
                 {navItems}
             </ul>
