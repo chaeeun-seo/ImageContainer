@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Carousel } from 'flowbite';
 
 import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 import Navbar from './components/Navbar';
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar/>
       <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/detail' element={<Detail/>}/>
       </Routes>
     </BrowserRouter>
   );
