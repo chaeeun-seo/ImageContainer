@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ItemContainer({order, name, image_url, price, checkGrid}) {
     // TODO : change bg color of img
@@ -12,11 +13,11 @@ export default function ItemContainer({order, name, image_url, price, checkGrid}
         //     <div className={`grow w-full ${checkGrid ? 'h-56' : 'h-36'}`}>
         //         <img style={{backgroundColor: `${bgColor}`}} className={`grow w-full h-full object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
         //     </div>
-        <div className={`${checkGrid ? 'w-44' : 'w-28'} grow`}>
+        <Link to={"/detail"} className={`${checkGrid ? 'w-44' : 'w-28'} grow`}>
             <img style={{backgroundColor: `${bgColor}`}} className={`w-full ${checkGrid ? 'h-56' : 'h-36'} object-cover bg-[#C0ACCA] rounded-lg`} alt="이미지" src={image_url}></img>
             <p className='font-bold text-sm'>{price}</p>
             <p className='truncate text-xs text-slate-500'>{name}</p>
-        </div>
+        </Link>
     )
 }
 
