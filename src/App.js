@@ -1,24 +1,20 @@
 import './App.css';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Carousel } from 'flowbite';
-import GridContainer from './components/GridContainer';
-import CategoryContainer from './components/CategoryContainer';
-import HorizontalContainer from './components/HorizontalContainer';
-import CarouselContainer from './components/CarouselContainer';
-import AccordionContainer from './components/AccordionContainer';
+
+import Home from './pages/Home';
+
 import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className='w-full flex flex-col justify-center items-center'>
+    <BrowserRouter className='w-full flex flex-col justify-center items-center'>
       <Navbar/>
-      <div className='w-full flex flex-col justify-center items-center gap-8'>
-        <CarouselContainer/>
-        <CategoryContainer/>
-        <HorizontalContainer isTitle={true}/>
-        <AccordionContainer/>
-        <GridContainer/>
-      </div>
-    </div>
+      <Routes>
+          <Route path='/' element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
