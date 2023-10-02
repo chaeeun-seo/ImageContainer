@@ -5,7 +5,7 @@ import ItemContainer from './ItemContainer'
 // HorizontalContainer receives props that decides which data to get
 export default function HorizontalContainer({isTitle}) {
     const dummyItems = dummyData.data.items
-    const items = dummyItems.map((item, index) => (<ItemContainer key={item.id} order={index} checkGrid={false} name={item.name} image_url={item.image_url} price={item.price}/>))
+    const items = dummyItems.map((item, index) => (<ItemContainer key={item.id} id={item.id} order={index} checkGrid={false} name={item.name} image_url={item.image_url} price={item.price}/>))
     const title = isTitle ? dummyData.title : ""
 
     return (
