@@ -7,6 +7,7 @@ export default function GridContainer() {
     const items = dummyItems.map(function(item, index){
         const propsObj = {
             key: item.id,
+            id : item.id,
             order: index,
             name: item.name,
             image_url: item.image_url,
