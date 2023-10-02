@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 import { FaBars, FaX, FaChartSimple, FaPen } from "react-icons/fa6";
 import { navLinks } from '../datas/navData';
 
@@ -28,7 +29,9 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <img src="https://studiocdn.ifland.io/images/logo/prod-9c2754b9730e649424d85a9264c2281e.png" alt="" />
+                <Link to="/">
+                    <img src="https://studiocdn.ifland.io/images/logo/prod-9c2754b9730e649424d85a9264c2281e.png" alt="" />
+                </Link>
             </div>
 
             <div className='flex gap-4 sm:hidden'>
